@@ -42,8 +42,8 @@ def user_input(input_message='Enter a word:'):
 def save_to_csv(dict_joke):
     """Takes a dictionary joke as input and stores the joke and its ID in a CSV file"""
     headers = ['ID', 'Joke'] # This is the data returned from the API
-    file_exists = os.path.exists('/Users/jorgetellez/Documents/Learn_python/Projects/jokes/jokes.csv') # Check if the file exists
-    with open('/Users/jorgetellez/Documents/Learn_python/Projects/jokes/jokes.csv', 'a') as jokes_list:
+    file_exists = os.path.exists('jokes.csv') # Check if the file exists
+    with open('jokes.csv', 'a') as jokes_list:
         writer = csv.writer(jokes_list)
         if not file_exists: # If the file does not exit place the headers, if it does continue to the next step
             writer.writerow(headers)
